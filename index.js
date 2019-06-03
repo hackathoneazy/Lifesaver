@@ -4,7 +4,6 @@ const port=3000;
 const app=express();
 const parser=require('body-parser');
 const mongoose=require('mongoose');
-let count=0;
 
 mongoose.connect("mongodb+srv://Salman:qwerty123@victorcluster-6cqju.mongodb.net/test?retryWrites=true",function(err){
 
