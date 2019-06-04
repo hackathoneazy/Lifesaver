@@ -45,12 +45,20 @@
         </div> <br><br>
         <div >
             <span>Are you a doctor? </span>
-            <button type="button" class="btn btn-secondary" onclick="learn.html">Click here</button><br><br>
+            <button type="button" class="btn btn-secondary" onclick="gotoDoc('https://www.w3schools.com/default.asp')">Click here</button><br><br>
             <span>Are you a patient? </span>
-            <button type="button" class="btn btn-secondary">Click here</button>
+            <button type="button" class="btn btn-secondary" onclick="gotoPatient('https://www.w3schools.com/default.asp')">Click here</button>
             
         </div>
-        
+      
+        <script type="text/javascript">
+          function gotoDoc(val){
+             location.href = val ;
+          }
+          function gotoPatient(val){
+              location.href = val ;
+          }
+        </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
