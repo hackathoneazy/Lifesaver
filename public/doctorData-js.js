@@ -13,7 +13,7 @@ function addDoc(){
     const contact = document.getElementById("contact") ;
     const email = document.getElementById("email") ;
     const password = document.getElementById("password") ;
-    axios.post('/../models/doctorModel.js', {
+    axios.post('http://localhost:3000/doctors', {
           name : name ,
           city : city ,
           college : college ,
@@ -30,7 +30,7 @@ function addDoc(){
           password : password 
       })
       .then(function (response) {
-        console.log(response);
+        console.log(response) ;
       })
       .catch(function (error) {
         console.log(error);
