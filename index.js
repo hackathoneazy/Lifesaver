@@ -31,7 +31,7 @@ app.use('*',function(req,res,next){
 //List all the routes here
 app.use('/doctors',doctors);
 app.use('/patients',patients);
-//app.listen('/diagnosis',diagnosis);
+app.use('/diagnosis',diagnosis);
 
 
 app.listen(port,function(){

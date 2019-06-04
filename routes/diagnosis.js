@@ -7,13 +7,15 @@ const diagnosisModel = require('../models/diagModel');
 
 
 router.get('/',function(req,res){
-    res.send("Patient's home").status(200);
-    // patientModel.find()
-    // .exec()
-    // .then(patientData=>{
+    // res.send("diagnosis's home").status(200);
+    diagnosisModel.find()
+    .populate('doctor','-medical_license_number')
+    .populate('patient','-password')
+    .exec()
+    .then(patientData=>{
     
-    //     res.json(patientData).status(200);
-    // })
+        res.json(patientData).status(200);
+    })
 });
 
 router.post('/',function(req,res){
