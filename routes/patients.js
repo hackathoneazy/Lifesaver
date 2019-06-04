@@ -5,6 +5,7 @@ const bcryptjs = require('bcryptjs'); // Encryption
 
 const patientModel = require('../models/patientModel.js');
 
+//Retrieve data of all patients
 router.get('/',function(req,res){
     // res.send("Patient's home").status(200);
     patientModel.find()
@@ -15,6 +16,7 @@ router.get('/',function(req,res){
     })
 });
 
+//Registerng data of one patient
 router.post('/',function(req,res){
     // console.log(res.body);
     // res.json(req.body).status(200);
@@ -49,6 +51,27 @@ router.post('/',function(req,res){
             res.send("Account Created").status(201);
 
         }
+    })
+});
+
+//Updating the height of patient with ID , note the path - do it likewise 
+router.put('/:patientID/update/height',function(req,res){
+    const id = req.params.patientID;
+    const newHeight =req.body.height;
+    patientModel.updateOne({_id:id},{$set:{height:newHeight}})
+    .exec()
+    .then(data=>{
+        res.json(data).status(200);
+    })
+});
+
+//deleting the record of one patient with ID 
+router.delete('/:patientID',function(req,res){
+    const id = req.params.patientID;
+    patientModel.deleteOne({_id:id})
+    .exec()
+    .then(data=>{
+        res.json(data).status(200);
     })
 });
 
