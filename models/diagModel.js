@@ -6,14 +6,20 @@ const diagModel = ({
        type : mongoose.Schema.Types.ObjectId,
        ref :'patient',
        required : true
-   },
+    },
    doctor : {
     type : mongoose.Schema.Types.ObjectId,
     ref :'doctor',
     required : true
     },
-    status : {type : String,default:"Not Diagnosed"},
-    time : {type:Date,default:Date.now} 
+    status : {
+        type : String,
+        default:"Not Diagnosed"
+    },
+    time : {
+        type:Date,
+        default:Date.now
+    } 
 });
 
 module.exports = mongoose.model('diagnosis',diagModel);

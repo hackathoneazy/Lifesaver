@@ -7,13 +7,15 @@ const diagnosisModel = require('../models/diagModel');
 
 
 router.get('/',function(req,res){
-    res.send("Patient's home").status(200);
-    // patientModel.find()
-    // .exec()
-    // .then(patientData=>{
+    // res.send("Patient's home").status(200);
+    diagnosisModel.find()
+    .populate('patient','-iceone -patienthistory')
+    .populate('doctor','')
+    .exec()
+    .then(patientData=>{
     
-    //     res.json(patientData).status(200);
-    // })
+        res.json(patientData).status(200);
+    })
 });
 
 router.post('/',function(req,res){
@@ -22,7 +24,7 @@ router.post('/',function(req,res){
     const newDiagnosis = new diagnosisModel({
             _id : new mongoose.Types.ObjectId,
             patient : req.body.patient,
-            doctor : req.body.doctor,
+            doctor : req.body.doctor
         
     });
 
