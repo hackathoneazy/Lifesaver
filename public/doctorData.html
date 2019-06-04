@@ -39,56 +39,55 @@
                 </div>
             </nav><br><br>
         
-        <h3 style="padding-top: 20px; color: coral"> Create an account</h3><br>
+        <h3 style=" color: coral"> Create an account</h3><br>
         <form>
                 <div class="form-group form-top">
-                  <label for="exampleFormControlInput1">Name:</label>
-                  <input type="text
-                  " class="form-control" id="exampleFormControlInput1" >
+                  <label for="nameofperson">Name:</label>
+                  <input  type="text" class="form-control" id="name" >
                 </div>
                 <div class="form-group form-top" style="margin-left: 10px">
-                        <label for="exampleFormControlInput1">City:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <label for="location">City:</label>
+                        <input type="text" class="form-control" id="city" >
                 </div>
                 <div class="form-group form-top">
-                        <label for="exampleFormControlInput1">College:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <label for="educaion">College:</label>
+                        <input type="text" class="form-control" id="college" >
                 </div>
                 <div class="form-group form-top" style="margin-left: 10px">
-                        <label for="exampleInputPassword1">Age:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="age">Age:</label>
+                        <input type="number" class="form-control" id="age" placeholder="Password">
                 </div>
                 <div class="form-group form-top">
                         <label for="exampleFormControlSelect1">Gender:</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                          <option>Male</option>
-                          <option>Female</option>
-                          <option>Other</option>
+                        <select class="form-control" id="gender">
+                          <option type = "text">Male</option>
+                          <option type ="text" >Female</option>
+                          <option type = "text" >Other</option>
                         </select>
                 </div>
                 <div class="form-group form-top" style="margin-left: 10px">
-                            <label for="exampleFormControlInput1">Degree:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                            <label for="edulevel">Degree:</label>
+                            <input type="text" class="form-control" id="degree">
                 </div>
                 <div class="form-group form-top">
-                        <label for="exampleFormControlInput1">Experience:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <label for="workexperience">Experience:</label>
+                        <input type="text" class="form-control" id="experience" >
                 </div>
                 <div class="form-group form-top" style="margin-left: 10px">
-                        <label for="exampleFormControlInput1">Speciality:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <label for="specs">Speciality:</label>
+                        <input type="text" class="form-control" id="speciality" >
                 </div>
                 <div class="form-group form-top">
                         <label for="exampleFormControlInput1">clinic:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <input type="text" class="form-control" id="clinic" >
                 </div>
                 <div class="form-group form-top" style="margin-left: 10px">
                         <label for="exampleFormControlInput1">medical-licence-number:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <input type="text" class="form-control" id="licenceno" >
                 </div>
                 <div class="form-group" style="width: 91%">
                         <label for="exampleFormControlTextarea1" >Description</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        <textarea type="text" class="form-control" id="description" rows="2"></textarea>
                 </div>
                 <div class="form-group">
                         <label for="exampleFormControlInput1">contact:</label>
@@ -102,7 +101,11 @@
                         <label for="exampleFormControlInput1">password:</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" >
                 </div>
-
+            
+                <div >
+                        <button type="submit" class="btn btn-primary btn-lg" style ="background-color: rgba(0, 132, 255, 0.822) ; margin-top:20px ; margin-bottom: 40px ; margin-left:10px " onclick="exist()">Sign Up</button>
+                         
+                </div>
               </form>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
