@@ -7,10 +7,17 @@ const diagnosisModel = require('../models/diagModel');
 
 
 router.get('/',function(req,res){
+<<<<<<< HEAD
     // res.send("Patient's home").status(200);
     diagnosisModel.find()
     .populate('patient','-iceone -patienthistory')
     .populate('doctor','')
+=======
+    // res.send("diagnosis's home").status(200);
+    diagnosisModel.find()
+    .populate('doctor','-medical_license_number')
+    .populate('patient','-password')
+>>>>>>> c9a4b03bf81dd53da00ac597c08a23ac772fe6f8
     .exec()
     .then(patientData=>{
     

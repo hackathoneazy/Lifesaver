@@ -2,11 +2,13 @@ const express=require('express');
 const router=express.Router();
 const mongoose=require('mongoose');
 const doctorModel=require('../models/doctorModel');
-
+const bcryptjs = require('bcryptjs'); // Encryption
 
 router.get('/',function(req,res){
     // res.send("Doctor's Home").status(200);
     doctorModel.find()
+    .populate('doctor','-medical_license_number')
+    .populate('doctor','-password')
     .exec()
     .then(docData=>{
     
@@ -21,6 +23,7 @@ router.post('/',function(req,res){
         name :req.body.name,
         degree: req.body.degree,
         email: req.body.degree,
+        password: bcryptjs.hashSync(req.body.password,10),
         speciality: req.body.speciality,
         experience: req.body.experience,
         description: req.body.description,
