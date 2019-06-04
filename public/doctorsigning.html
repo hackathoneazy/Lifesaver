@@ -63,7 +63,7 @@
         <button type="submit" class="btn btn-primary btn-lg" style ="background-color: blue ; margin-top:20px ;" onclick="exist()">Log In</button>
         <div class="up" style="margin-top:23px">
            <span >Not a member?</span>
-           <button type="button" class="btn btn-secondary btn-sm" onclick="newone()">Sign Up</button>
+           <button type="button" class="btn btn-secondary btn-sm" onclick="newone('https://www.w3schools.com/default.asp')">Sign Up</button>
         </div>
       </form>
   </div>
@@ -73,8 +73,8 @@
    function exist(){
       
    }
-   function newone(){
-
+   function newone(val){
+      location.href = val ;
    }
 </script>
 
