@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const diagModel = ({
    _id : mongoose.Schema.Types.ObjectId,
    patient : {
