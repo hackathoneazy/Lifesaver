@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100%; 
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form-group{
+    height: 80px ;
+    width: 150px ;
+    font-size: 20px ;
+}
+.form-control{
+  width: 500px ;
+  height : 40px ;
+  border-radius: 5px ;
+}
+.btn{
+   width:100px ;
+   height : 30px ;
+   border-radius: 5px ;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="column" style="font-family:Adamina padding-top:50px ">
+    <h1 style=" font-family:Adamina; padding-top:50px; text-align: center"> HELLO DOCTOR </h1>
+    <img src = "DOC1.jpg" style="width:60%;height:60%;margin-left:50px">
+  </div>
+  <div class="column" >
+    <div style="margin-top:50px"> 
+       <h1> Sign In </h1>
+    </div>
+    <form>
+        <div class="form-group" style="margin-top:50px">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          
+        </div>
+        <div class="form-group" style="margin-top:20px">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style ="background-color: blue ; margin-top:20px ;">Log In</button>
+        <div class="up">
+           <h2>Not a member?</h2>
+           
+        </div>
+      </form>
+  </div>
+</div>
+
+</body>
+</html>
