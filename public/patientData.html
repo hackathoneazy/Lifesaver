@@ -1,14 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    
+    <style>
+      .form-group{
+          width : 45% ;
+          margin-left: 5px ;
+      }
+      .form-top{
+          float: left ;
+      } 
+  </style>
+
   </head>
   <body>
 
@@ -34,73 +43,81 @@
           </div>
       </nav><br><br>
         
-        <h3 style="padding-top: 20px; color: coral"> Create an account</h3><br>
+        <h3 style=" color: coral"> Create an account</h3><br>
         <form>
-                <div class="form-group">
+                <div class="form-group form-top">
                   <label for="exampleFormControlInput1">Name:</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" >
+                  <input type="text" class="form-control" id="name" >
                 </div>
-                <div class="form-group">
+                <div class="form-group form-top" style="margin-left: 10px">
                         <label for="exampleFormControlInput1">Email Address:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <input type="text" class="form-control" id="email" placeholder="name@example.com">
                 </div>
-                <div class="form-group" style="width:70%">
+                <div class="form-group form-top">
                         <label for="exampleInputPassword1">Password:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
                 </div>
-                <div class="form-group">
+                <div class="form-group form-top" style="margin-left: 10px">
                         <label for="exampleFormControlSelect1">Gender:</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                          <option>Male</option>
-                          <option>Female</option>
-                          <option>Other</option>
+                        <select class="form-control" id="gender">
+                          <option type="text">Male</option>
+                          <option type="text">Female</option>
+                          <option type="text">Other</option>
                         </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group form-top">
+                        <label for="exampleFormControlSelect1">Blood Group:</label>
+                        <select class="form-control" id="bloodGroup">
+                          <option type="text">A+</option>
+                          <option type="text">A-</option>
+                          <option type="text">B+</option>
+                          <option type="text">B-</option>
+                          <option type="text">AB+</option>
+                          <option type="text">AB-</option>
+                          <option type="text">O+</option>
+                          <option type="text">O-</option>
+                        </select>
+                </div>
+                <div class="form-group form-top" style="margin-left: 10px">
                             <label for="exampleFormControlInput1">Age:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                            <input type="number" class="form-control" id="age">
                 </div>
-                <div class="form-group">
+                <div class="form-group form-top">
                         <label for="exampleFormControlInput1">Weight:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <input type="number" class="form-control" id="weight" >
                 </div>
-                <div class="form-group">
+                <div class="form-group form-top" style="margin-left: 10px">
                         <label for="exampleFormControlInput1">Height(cm):</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <input type="number" class="form-control" id="height" >
                 </div>
-                <div class="form-group">
+                <div class="form-group form-top">
                         <label for="exampleFormControlInput1">Contact Number:</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" >
+                        <input type=" number" class="form-control" id="contactNumber" >
                 </div>
+                <div class="form-group form-top" style="margin-left: 10px">
+                        <label for="exampleFormControlInput1">Emergency Contact Number1:</label>
+                        <input type="number" class="form-control" id="emc1">
+                </div>
+                <div class="form-group form-top">
+                        <label for="exampleFormControlInput1">Emergency Contact Number2:</label>
+                        <input type="number" class="form-control" id="emc2">
+                </div>
+                <div class="form-group form-top" style="margin-left: 10px">
+                        <label for="exampleFormControlInput1">City:</label>
+                        <input type="text" class="form-control" id="city">
+                </div>
+                
 
+                
+                
                 <div class="form-group">
-                  <label for="exampleFormControlSelect1">Example select</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
+                  <label for="exampleFormControlTextarea1">Patient Past History</label>
+                  <textarea type="text"class="form-control" id="pastHistory" rows="3"></textarea>
                 </div>
-                <div class="form-group">
-                  <label for="exampleFormControlSelect2">Example multiple select</label>
-                  <select multiple class="form-control" id="exampleFormControlSelect2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Example textarea</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-              </form>
+              </form><br>
+              <button type="button" class="btn btn-primary btn-sm" style="margin-left: 20px;margin-bottom: 40px">Sign up</button>  
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
