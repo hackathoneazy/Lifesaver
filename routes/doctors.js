@@ -40,6 +40,7 @@ router.post('/',function(req,res){
         
     });
   
+    
             newData.save(function(err){
                 if(err)
                 res.send(err).status(400);
@@ -47,7 +48,38 @@ router.post('/',function(req,res){
                 res.send("Data Saved").status(201);
             });
             
-        
+        //Updating the email of Doctor with ID , note the path - do it likewise 
+router.put('/:doctorID/update/email',function(req,res){
+    const id = req.params.doctorID;
+    const newEmail =req.body.email;
+    doctorModel.updateOne({_id:id},{$set:{email:newEmail}})
+    .exec()
+    .then(data=>{
+        res.json(data).status(200);
+    })
+});
+      //Updating the degree of Doctor with ID , note the path - do it likewise 
+      router.put('/:doctorID/update/degree',function(req,res){
+        const id = req.params.doctorID;
+        const newDegree =req.body.degree;
+        doctorModel.updateOne({_id:id},{$set:{email:newDegree}})
+        .exec()
+        .then(data=>{
+            res.json(data).status(200);
+        })
+    });
+    
+    
+
+//deleting the record of one doctor with ID 
+router.delete('/:doctorID',function(req,res){
+    const id = req.params.doctorID;
+    doctorModel.deleteOne({_id:id})
+    .exec()
+    .then(data=>{
+        res.json(data).status(200);
+    })
+});
 });
 
 
