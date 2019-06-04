@@ -23,7 +23,7 @@ router.post('/',function(req,res){
             height : req.body.height,
             weight : req.body.weight,
             email : req.body.email,
-            password : req.body.password,
+            password : bcryptjs.hashSync(req.body.password,10),
             name : req.body.name,
             gender : req.body.gender,
             contact : req.body.contact,
