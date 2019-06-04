@@ -37,7 +37,27 @@
 </head>
 <body>
 
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a href="https://www.freepik.com/free-photos-vectors/hands"></a>
+        <a class="navbar-brand" href="#">LifeSaver</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="doctor.html">Doctor Sign in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="patient.html">Patient Sign in</a>
+            </li>
+            
+          </ul>
+        </div>
+    </nav><br><br>
 
 <div class="row">
   <div class="column" style="font-family:Adamina padding-top:50px ">
@@ -63,7 +83,7 @@
         <button type="submit" class="btn btn-primary btn-lg" style ="background-color: blue ; margin-top:20px ;" onclick="exist()">Log In</button>
         <div class="up" style="margin-top:23px">
            <span >Not a member?</span>
-           <button type="button" class="btn btn-secondary btn-sm" onclick="newone()">Sign Up</button>
+           <button type="button" class="btn btn-secondary btn-sm" onclick="newone('doctorData.html')">Sign Up</button>
         </div>
       </form>
   </div>
@@ -73,8 +93,8 @@
    function exist(){
       
    }
-   function newone(){
-
+   function newone(val){
+      location.href = val ;
    }
 </script>
 
